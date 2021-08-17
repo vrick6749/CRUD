@@ -9,7 +9,7 @@ var app = new function(){
         if(this.tasks.length >0){
             for(i=0; i<this.tasks.length; i++){
                data+='<tr>';
-               data+='<td>'+ (i+1) + '. ' + this.task[i]+'</td>';
+               data+='<td>'+ (i+1) + '. ' + this.tasks[i]+'</td>';
                data+='</tr>';
             }
         }
@@ -25,6 +25,12 @@ var app = new function(){
     this.Add = function(){
 
         el = document.getElementById('add-todo')
+        var task = el.value;
+        if(task){
+            this.tasks.push(task.trim());
+            el.value='';
+            this.FetchAll()
+        }
     };
 
 
