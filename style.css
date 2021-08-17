@@ -3,3 +3,10 @@
     margin-top: 25px;
     background-color: antiquewhite;
 }
+
+.form{
+    background-color: red;
+    margin: auto;
+    max-width: 80%;
+    text-align: center;
+}
